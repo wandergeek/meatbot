@@ -5,8 +5,6 @@
 #include <WiFiClientSecure.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
-#include "DHTesp.h"
-#include "Ticker.h"
 
 #include "config.h"
 
