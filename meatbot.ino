@@ -74,7 +74,7 @@ void setup() {
   Serial.println();
 
   WiFi.mode(WIFI_STA);
-  WiFiMulti.addAP("TheNicks", "163barkly");
+  WiFiMulti.addAP(wifiAP, wifiPassword);
 
   // wait for WiFi connection
   Serial.print("Waiting for WiFi to connect...");
