@@ -100,7 +100,10 @@ void loop() {
         https.addHeader("Content-Type", "application/json");
         sprintf(payload, "{ \"temperatureC\" : %.1f }", temperatureC);
         Serial.print("POSTING: ");
-        Serial.println(payload);
+        Serial.print(payload);
+        Serial.print(" to ");
+        Serial.println(esEndpoint);
+
         int httpCode = https.POST(payload);
   
         if (httpCode > 0) {
@@ -112,7 +115,7 @@ void loop() {
             Serial.println(payload);
           }
         } else {
-          Serial.printf("[HTTPS] GET... failed, error: %s\n", https.errorToString(httpCode).c_str());
+          Serial.printf("[HTTPS] POST... failed, code %d, error: %s\n", httpCode, https.errorToString(httpCode).c_str());
         }
   
         https.end();
