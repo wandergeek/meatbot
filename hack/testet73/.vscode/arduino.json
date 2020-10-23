@@ -1,4 +1,5 @@
 {
-    "board": "esp32:esp32:nano32",
-    "configuration": "FlashFreq=80,UploadSpeed=921600"
+    "board": "arduino:avr:uno",
+    "port": "/dev/tty.usbmodem1411",
+    "sketch": "testet73.ino"
 }
