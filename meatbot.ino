@@ -49,7 +49,7 @@ WiFiClientSecure *client = new WiFiClientSecure;
       HTTPClient https;
   
       Serial.print("[HTTPS] begin...\n");
-      if (https.begin(*client, esEndpoint + "/" + esIndex + "/_doc/")) {  // HTTPS
+      if (https.begin(*client, esEndpoint + "/" + esIndex + "/_doc")) {  // HTTPS
         https.addHeader("Content-Type", "application/json");
         sprintf(payload, "{ \"temperatureC\" : %.1f }", temp);
         Serial.print("POSTING: ");
